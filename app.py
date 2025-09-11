@@ -5,17 +5,21 @@ import numpy as np
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-# Connect to RDS MySQL
-conn = mysql.connector.connect(
-    host='agriculture-db.cmrwmgi6krkn.us-east-1.rds.amazonaws.com',
-    user='Aman',
-    password='singhfamily12345',
-    database='agriculture'
-)
-cursor = conn.cursor()
-
 # Load ML model
 model = joblib.load("crop_recommendation_model.pkl")
+
+# ✅ Function to create a fresh database connection
+def get_db_connection():
+    try:
+        return mysql.connector.connect(
+            host='agriculture-db.cmrwmgi6krkn.us-east-1.rds.amazonaws.com',
+            user='Aman',
+            password='singhfamily12345',
+            database='agriculture'
+        )
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        return None  # Return None if connection fails
 
 @app.route('/')
 def home():
@@ -30,17 +34,26 @@ def signup():
         password = request.form['Password']
         govt_id = request.form['GovtId']
 
+        conn = None
         try:
+            conn = get_db_connection()
+            if conn is None:
+                return "Signup failed: Database connection not available."
+
             cur = conn.cursor()
-            cur.execute("INSERT INTO users (Name, Email, Password, GovtId) VALUES (%s, %s, %s, %s)", 
+            cur.execute("INSERT INTO users (Name, Email, Password, GovtId) VALUES (%s, %s, %s, %s)",
                         (name, email, password, govt_id))
             conn.commit()
-            cur.close()
-            return redirect("/croprec")  # ✅ Redirect to crop input page after successful signup
+            return redirect("/croprec")
         except mysql.connector.IntegrityError:
             return "Email already registered. Try logging in."
         except Exception as e:
             return f"Signup failed: {e}"
+        finally:
+            if 'cur' in locals() and cur is not None:
+                cur.close()
+            if conn is not None:
+                conn.close() # Always close the connection
 
     return render_template("signup.html")
 
@@ -51,15 +64,28 @@ def login():
         email = request.form['Email']
         password = request.form['Password']
 
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM users WHERE Email=%s AND Password=%s", (email, password))
-        user = cur.fetchone()
-        cur.close()
+        conn = None
+        try:
+            conn = get_db_connection()
+            if conn is None:
+                return "Login failed: Database connection not available."
 
-        if user:
-            return redirect("/croprec")
-        else:
-            return "Invalid login credentials"
+            cur = conn.cursor()
+            cur.execute("SELECT * FROM users WHERE Email=%s AND Password=%s", (email, password))
+            user = cur.fetchone()
+
+            if user:
+                return redirect("/croprec")
+            else:
+                return "Invalid login credentials"
+        except Exception as e:
+            return f"Login failed: {e}"
+        finally:
+            if 'cur' in locals() and cur is not None:
+                cur.close()
+            if conn is not None:
+                conn.close() # Always close the connection
+
     return render_template("login.html")
 
 # ✅ Crop Recommendation Page
@@ -92,4 +118,4 @@ def predict():
         return f"Prediction failed: {e}"
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
