@@ -1,0 +1,31 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python (backend)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node (frontend)
+node_modules/
+frontend/dist/
+
+# Database backups contain personal data
+backups/
+
+# Local tool settings
+.claude/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local dev logs
+*.log

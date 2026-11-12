@@ -1,0 +1,424 @@
+{
+  "source": "FAO EcoCrop database (https://gaez.fao.org/pages/ecocrop); copy under the UK Open Government Licence v3.0",
+  "note": "Temperature in degrees C, soil pH. Absolute limits are where the crop can still survive or grow; optimal limits are where it does best.",
+  "crops": {
+    "rice": {
+      "species": "Oryza sativa",
+      "temperature_optimal": [
+        20.0,
+        30.0
+      ],
+      "temperature_absolute": [
+        10.0,
+        36.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.0
+      ],
+      "ph_absolute": [
+        4.5,
+        9.0
+      ]
+    },
+    "maize": {
+      "species": "Zea mays",
+      "temperature_optimal": [
+        18.0,
+        33.0
+      ],
+      "temperature_absolute": [
+        10.0,
+        47.0
+      ],
+      "ph_optimal": [
+        5.0,
+        7.0
+      ],
+      "ph_absolute": [
+        4.5,
+        8.5
+      ]
+    },
+    "chickpea": {
+      "species": "Cicer arietinum",
+      "temperature_optimal": [
+        15.0,
+        29.0
+      ],
+      "temperature_absolute": [
+        7.0,
+        35.0
+      ],
+      "ph_optimal": [
+        6.0,
+        8.5
+      ],
+      "ph_absolute": [
+        4.7,
+        9.5
+      ]
+    },
+    "kidneybeans": {
+      "species": "Phaseolus vulgaris",
+      "temperature_optimal": [
+        16.0,
+        25.0
+      ],
+      "temperature_absolute": [
+        7.0,
+        32.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.5
+      ],
+      "ph_absolute": [
+        4.0,
+        9.0
+      ]
+    },
+    "pigeonpeas": {
+      "species": "Cajanus cajan",
+      "temperature_optimal": [
+        18.0,
+        38.0
+      ],
+      "temperature_absolute": [
+        10.0,
+        45.0
+      ],
+      "ph_optimal": [
+        5.0,
+        7.0
+      ],
+      "ph_absolute": [
+        4.5,
+        8.4
+      ]
+    },
+    "mothbeans": {
+      "species": "Vigna aconitifolia",
+      "temperature_optimal": [
+        24.0,
+        32.0
+      ],
+      "temperature_absolute": [
+        13.0,
+        45.0
+      ],
+      "ph_optimal": [
+        6.5,
+        7.5
+      ],
+      "ph_absolute": [
+        5.0,
+        8.0
+      ]
+    },
+    "mungbean": {
+      "species": "Vigna radiata",
+      "temperature_optimal": [
+        21.0,
+        36.0
+      ],
+      "temperature_absolute": [
+        8.0,
+        40.0
+      ],
+      "ph_optimal": [
+        5.5,
+        6.2
+      ],
+      "ph_absolute": [
+        4.3,
+        8.3
+      ]
+    },
+    "blackgram": {
+      "species": "Vigna mungo",
+      "temperature_optimal": [
+        22.0,
+        35.0
+      ],
+      "temperature_absolute": [
+        8.0,
+        40.0
+      ],
+      "ph_optimal": [
+        5.5,
+        6.5
+      ],
+      "ph_absolute": [
+        4.5,
+        7.5
+      ]
+    },
+    "lentil": {
+      "species": "Lens culinaris",
+      "temperature_optimal": [
+        15.0,
+        29.0
+      ],
+      "temperature_absolute": [
+        5.0,
+        32.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.5
+      ],
+      "ph_absolute": [
+        4.5,
+        8.2
+      ]
+    },
+    "pomegranate": {
+      "species": "Punica granatum",
+      "temperature_optimal": [
+        23.0,
+        32.0
+      ],
+      "temperature_absolute": [
+        8.0,
+        40.0
+      ],
+      "ph_optimal": [
+        6.5,
+        7.5
+      ],
+      "ph_absolute": [
+        5.8,
+        8.5
+      ]
+    },
+    "banana": {
+      "species": "Musa acuminata",
+      "temperature_optimal": [
+        23.0,
+        33.0
+      ],
+      "temperature_absolute": [
+        12.0,
+        42.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.5
+      ],
+      "ph_absolute": [
+        4.0,
+        8.4
+      ]
+    },
+    "mango": {
+      "species": "Mangifera indica",
+      "temperature_optimal": [
+        24.0,
+        30.0
+      ],
+      "temperature_absolute": [
+        8.0,
+        48.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.5
+      ],
+      "ph_absolute": [
+        4.3,
+        8.5
+      ]
+    },
+    "grapes": {
+      "species": "Vitis vinifera",
+      "temperature_optimal": [
+        18.0,
+        30.0
+      ],
+      "temperature_absolute": [
+        10.0,
+        38.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.5
+      ],
+      "ph_absolute": [
+        4.5,
+        8.5
+      ]
+    },
+    "watermelon": {
+      "species": "Citrullus lanatus",
+      "temperature_optimal": [
+        20.0,
+        35.0
+      ],
+      "temperature_absolute": [
+        15.0,
+        40.0
+      ],
+      "ph_optimal": [
+        6.0,
+        7.0
+      ],
+      "ph_absolute": [
+        5.5,
+        7.5
+      ]
+    },
+    "muskmelon": {
+      "species": "Cucumis melo",
+      "temperature_optimal": [
+        18.0,
+        30.0
+      ],
+      "temperature_absolute": [
+        9.0,
+        35.0
+      ],
+      "ph_optimal": [
+        6.0,
+        7.5
+      ],
+      "ph_absolute": [
+        5.0,
+        8.7
+      ]
+    },
+    "apple": {
+      "species": "Malus domestica",
+      "temperature_optimal": [
+        14.0,
+        27.0
+      ],
+      "temperature_absolute": [
+        8.0,
+        33.0
+      ],
+      "ph_optimal": [
+        6.0,
+        7.0
+      ],
+      "ph_absolute": [
+        4.5,
+        8.0
+      ]
+    },
+    "orange": {
+      "species": "Citrus sinensis",
+      "temperature_optimal": [
+        20.0,
+        30.0
+      ],
+      "temperature_absolute": [
+        13.0,
+        38.0
+      ],
+      "ph_optimal": [
+        5.0,
+        6.0
+      ],
+      "ph_absolute": [
+        4.0,
+        8.3
+      ]
+    },
+    "papaya": {
+      "species": "Carica papaya",
+      "temperature_optimal": [
+        21.0,
+        30.0
+      ],
+      "temperature_absolute": [
+        12.0,
+        44.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.0
+      ],
+      "ph_absolute": [
+        4.5,
+        8.0
+      ]
+    },
+    "coconut": {
+      "species": "Cocos nucifera",
+      "temperature_optimal": [
+        22.0,
+        34.0
+      ],
+      "temperature_absolute": [
+        14.0,
+        38.0
+      ],
+      "ph_optimal": [
+        5.0,
+        8.0
+      ],
+      "ph_absolute": [
+        4.3,
+        8.7
+      ]
+    },
+    "cotton": {
+      "species": "Gossypium hirsutum",
+      "temperature_optimal": [
+        22.0,
+        36.0
+      ],
+      "temperature_absolute": [
+        15.0,
+        42.0
+      ],
+      "ph_optimal": [
+        6.0,
+        7.5
+      ],
+      "ph_absolute": [
+        5.0,
+        9.5
+      ]
+    },
+    "jute": {
+      "species": "Corchorus capsularis",
+      "temperature_optimal": [
+        20.0,
+        37.0
+      ],
+      "temperature_absolute": [
+        13.0,
+        45.0
+      ],
+      "ph_optimal": [
+        6.5,
+        7.0
+      ],
+      "ph_absolute": [
+        5.0,
+        8.6
+      ]
+    },
+    "coffee": {
+      "species": "Coffea arabica",
+      "temperature_optimal": [
+        14.0,
+        28.0
+      ],
+      "temperature_absolute": [
+        10.0,
+        34.0
+      ],
+      "ph_optimal": [
+        5.5,
+        7.0
+      ],
+      "ph_absolute": [
+        4.3,
+        8.4
+      ]
+    }
+  }
+}

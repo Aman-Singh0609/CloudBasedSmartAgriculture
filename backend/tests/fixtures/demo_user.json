@@ -1,0 +1,6 @@
+{
+  "_comment": "Demo account for LOCAL development and manual testing only. scripts/live_smoke_test.py creates it on a running development server. Never use it in production.",
+  "name": "Demo Farmer",
+  "email": "demo.farmer@example.test",
+  "password": "Tr4ctor-Lane-Meadow"
+}

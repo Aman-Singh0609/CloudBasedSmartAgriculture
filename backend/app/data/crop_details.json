@@ -1,0 +1,516 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "description": "Reference information for the 22 crops the bundled model can recommend. Keys are the exact labels the model outputs.",
+    "typical_ranges_note": "typical_ranges are approximate value ranges for each crop in the public 'Crop Recommendation' dataset whose labels the bundled model predicts. They are reference data for a rule-based comparison, not agronomic prescriptions. The test suite verifies that the model predicts each crop at the midpoint of its ranges.",
+    "season_note": "Season information reflects common practice in India, where the reference data originates. Local sowing dates differ."
+  },
+  "crops": {
+    "rice": {
+      "name": "Rice",
+      "also_known_as": "Paddy, Dhan",
+      "scientific_name": "Oryza sativa",
+      "category": "Cereal",
+      "perennial": false,
+      "summary": "A staple cereal that thrives in warm, humid conditions with plenty of water.",
+      "description": "Rice is the staple food for much of Asia. It is usually grown in levelled, bunded fields that hold standing water for a large part of the season, although rain-fed upland systems also exist.",
+      "growing_conditions": {
+        "climate": "Warm and humid. Grows best between about 20 and 35 °C with high humidity.",
+        "soil": "Clay or clay-loam soils that hold water well. Slightly acidic to neutral soils are preferred.",
+        "water": "High. Lowland rice needs abundant rainfall or assured irrigation."
+      },
+      "season": "Mainly kharif (monsoon) in India; also grown in rabi and summer where irrigation is available.",
+      "cautions": [
+        "Water demand is high. Without reliable rainfall or irrigation the crop is risky.",
+        "Sandy soils that drain quickly are poorly suited to flooded rice."
+      ],
+      "typical_ranges": {
+        "nitrogen": [60, 99], "phosphorus": [35, 60], "potassium": [35, 45],
+        "temperature": [20, 27], "humidity": [80, 85], "ph": [5.0, 7.9], "rainfall": [183, 298]
+      }
+    },
+    "maize": {
+      "name": "Maize",
+      "also_known_as": "Corn, Makka",
+      "scientific_name": "Zea mays",
+      "category": "Cereal",
+      "perennial": false,
+      "summary": "A versatile warm-season cereal grown for grain, feed and fodder.",
+      "description": "Maize is grown for food, animal feed, fodder and industrial uses. It grows quickly in warm weather and responds strongly to soil fertility, especially nitrogen.",
+      "growing_conditions": {
+        "climate": "Warm and frost-free. Grows best between about 18 and 27 °C.",
+        "soil": "Fertile, well-drained loam. Tolerates slightly acidic to neutral soils.",
+        "water": "Moderate. Sensitive to drought around tasselling and silking, and to waterlogging at any stage."
+      },
+      "season": "Mainly kharif in India; also rabi and spring in some regions.",
+      "cautions": [
+        "Standing water damages the crop quickly; fields need good drainage.",
+        "Maize is a heavy feeder and yields fall sharply on poor soils."
+      ],
+      "typical_ranges": {
+        "nitrogen": [60, 100], "phosphorus": [35, 60], "potassium": [15, 25],
+        "temperature": [18, 27], "humidity": [55, 75], "ph": [5.5, 7.0], "rainfall": [60, 110]
+      }
+    },
+    "chickpea": {
+      "name": "Chickpea",
+      "also_known_as": "Gram, Chana",
+      "scientific_name": "Cicer arietinum",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "A cool-season pulse suited to dry conditions and low humidity.",
+      "description": "Chickpea is a cool-season pulse that is often grown on moisture left in the soil after the monsoon. As a legume it fixes atmospheric nitrogen and can improve the soil for the next crop.",
+      "growing_conditions": {
+        "climate": "Cool and dry. Grows best between about 15 and 25 °C with low humidity.",
+        "soil": "Well-drained loam to clay-loam. Tolerates neutral to mildly alkaline soils.",
+        "water": "Low. Often grown on residual soil moisture with little or no irrigation."
+      },
+      "season": "Rabi (winter) in India.",
+      "cautions": [
+        "Humid weather and excess moisture encourage fungal disease.",
+        "Frost at flowering can cause heavy losses."
+      ],
+      "typical_ranges": {
+        "nitrogen": [20, 60], "phosphorus": [55, 80], "potassium": [75, 85],
+        "temperature": [17, 21], "humidity": [14, 20], "ph": [6.0, 8.9], "rainfall": [65, 95]
+      }
+    },
+    "kidneybeans": {
+      "name": "Kidney beans",
+      "also_known_as": "Rajma",
+      "scientific_name": "Phaseolus vulgaris",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "A pulse for mild temperatures and well-drained, slightly acidic soils.",
+      "description": "Kidney beans are a protein-rich pulse grown for their dried seed. They prefer mild temperatures and are less tolerant of heat, frost and standing water than many other pulses.",
+      "growing_conditions": {
+        "climate": "Mild. Grows best between about 15 and 25 °C; sensitive to frost and to high heat at flowering.",
+        "soil": "Well-drained loam. Slightly acidic to neutral soils are preferred.",
+        "water": "Moderate and evenly spread. Does not tolerate waterlogging."
+      },
+      "season": "Kharif in hill regions and rabi in the plains of India.",
+      "cautions": [
+        "Hot weather at flowering causes flower drop and poor pod set.",
+        "Sensitive to saline soils and to waterlogging."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [55, 80], "potassium": [15, 25],
+        "temperature": [15, 25], "humidity": [18, 25], "ph": [5.5, 6.0], "rainfall": [60, 150]
+      }
+    },
+    "pigeonpeas": {
+      "name": "Pigeon peas",
+      "also_known_as": "Arhar, Tur",
+      "scientific_name": "Cajanus cajan",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "A deep-rooted, drought-tolerant pulse for warm regions.",
+      "description": "Pigeon pea is a hardy, deep-rooted pulse that tolerates dry spells well. It is frequently intercropped with cereals and, as a legume, contributes nitrogen to the soil.",
+      "growing_conditions": {
+        "climate": "Warm. Tolerates a wide range, roughly 18 to 35 °C.",
+        "soil": "Grows on many soil types provided drainage is good.",
+        "water": "Low to moderate. Tolerates drought but not waterlogging."
+      },
+      "season": "Kharif in India. Many varieties are long-duration and occupy the field for five months or more.",
+      "cautions": [
+        "Waterlogging, even for short periods, can kill plants.",
+        "Long-duration varieties keep the land occupied for much of the year."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [55, 80], "potassium": [15, 25],
+        "temperature": [18, 37], "humidity": [30, 70], "ph": [4.5, 7.5], "rainfall": [90, 200]
+      }
+    },
+    "mothbeans": {
+      "name": "Moth beans",
+      "also_known_as": "Moth, Matki",
+      "scientific_name": "Vigna aconitifolia",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "One of the most drought-tolerant pulses, suited to hot, dry regions.",
+      "description": "Moth bean is a low-growing pulse of arid and semi-arid regions. Its spreading habit covers the soil and it produces a crop with very little rainfall.",
+      "growing_conditions": {
+        "climate": "Hot and dry. Grows best between about 24 and 32 °C.",
+        "soil": "Light, sandy soils. Tolerates a wide range of soil pH.",
+        "water": "Very low. Suited to low-rainfall areas."
+      },
+      "season": "Kharif in arid and semi-arid parts of India.",
+      "cautions": [
+        "Not suited to heavy or waterlogged soils.",
+        "Yields are modest compared with other pulses."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [35, 60], "potassium": [15, 25],
+        "temperature": [24, 32], "humidity": [40, 65], "ph": [3.5, 9.9], "rainfall": [30, 75]
+      }
+    },
+    "mungbean": {
+      "name": "Mung bean",
+      "also_known_as": "Green gram, Moong",
+      "scientific_name": "Vigna radiata",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "A short-duration warm-season pulse that fits between main crops.",
+      "description": "Mung bean matures in roughly two to three months, which lets it fit between main crops. It is a legume and leaves nitrogen in the soil for the following crop.",
+      "growing_conditions": {
+        "climate": "Warm. Grows best between about 25 and 35 °C.",
+        "soil": "Well-drained loam or sandy loam with near-neutral pH.",
+        "water": "Low to moderate. Sensitive to waterlogging."
+      },
+      "season": "Kharif, and spring or summer with irrigation, in India.",
+      "cautions": [
+        "Rain at maturity can spoil pods and reduce grain quality.",
+        "Poorly drained fields cause root problems."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [35, 60], "potassium": [15, 25],
+        "temperature": [27, 30], "humidity": [80, 90], "ph": [6.2, 7.2], "rainfall": [36, 60]
+      }
+    },
+    "blackgram": {
+      "name": "Black gram",
+      "also_known_as": "Urad",
+      "scientific_name": "Vigna mungo",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "A warm-season pulse that suits moisture-retentive loam soils.",
+      "description": "Black gram is a short-duration pulse widely used for dal and fermented foods. It prefers soils that hold some moisture and, as a legume, adds nitrogen to the soil.",
+      "growing_conditions": {
+        "climate": "Warm and moderately humid. Grows best between about 25 and 35 °C.",
+        "soil": "Loam to clay-loam that retains moisture, with neutral pH.",
+        "water": "Moderate. Sensitive to waterlogging."
+      },
+      "season": "Kharif across India; also rabi in southern states and summer with irrigation.",
+      "cautions": [
+        "Sensitive to waterlogging and to saline soils.",
+        "Heavy rain at flowering reduces pod set."
+      ],
+      "typical_ranges": {
+        "nitrogen": [20, 60], "phosphorus": [55, 80], "potassium": [15, 25],
+        "temperature": [25, 35], "humidity": [60, 70], "ph": [6.5, 7.8], "rainfall": [60, 75]
+      }
+    },
+    "lentil": {
+      "name": "Lentil",
+      "also_known_as": "Masoor",
+      "scientific_name": "Lens culinaris",
+      "category": "Pulse",
+      "perennial": false,
+      "summary": "A cool-season pulse that needs little water.",
+      "description": "Lentil is a cool-season pulse commonly grown after rice or on residual soil moisture. It needs little water and, as a legume, improves soil nitrogen.",
+      "growing_conditions": {
+        "climate": "Cool. Grows best between about 18 and 30 °C.",
+        "soil": "Loam to clay-loam with neutral to slightly alkaline pH.",
+        "water": "Low. Often grown without irrigation on stored soil moisture."
+      },
+      "season": "Rabi (winter) in India.",
+      "cautions": [
+        "Waterlogging quickly damages the crop.",
+        "Hot weather at flowering and grain filling reduces yield."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [55, 80], "potassium": [15, 25],
+        "temperature": [18, 30], "humidity": [60, 70], "ph": [5.9, 7.8], "rainfall": [35, 55]
+      }
+    },
+    "pomegranate": {
+      "name": "Pomegranate",
+      "also_known_as": "Anar",
+      "scientific_name": "Punica granatum",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A hardy fruit shrub that tolerates dry conditions once established.",
+      "description": "Pomegranate is a hardy fruiting shrub that tolerates drought and a range of soils once established. Fruit quality depends heavily on steady watering while the fruit develops.",
+      "growing_conditions": {
+        "climate": "Does well where summers are hot and winters are cool.",
+        "soil": "Well-drained loam; tolerates a range of soils including mildly alkaline ones.",
+        "water": "Moderate. Regular, even irrigation during fruit development."
+      },
+      "season": "Planted as an orchard crop; plants begin bearing after a few years.",
+      "cautions": [
+        "Irregular watering causes fruit cracking.",
+        "Prolonged humid weather increases disease pressure on fruit and foliage."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [5, 30], "potassium": [35, 45],
+        "temperature": [18, 25], "humidity": [85, 95], "ph": [5.5, 7.2], "rainfall": [102, 112]
+      }
+    },
+    "banana": {
+      "name": "Banana",
+      "also_known_as": "Kela",
+      "scientific_name": "Musa spp.",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A tropical fruit crop that needs warmth, rich soil and steady water.",
+      "description": "Banana is a fast-growing tropical fruit crop. It needs warmth, deep fertile soil and a steady water supply throughout the year, and it removes large amounts of nutrients, particularly potassium and nitrogen.",
+      "growing_conditions": {
+        "climate": "Tropical and humid. Grows best between about 25 and 30 °C; damaged by frost and strong wind.",
+        "soil": "Deep, well-drained loam rich in organic matter.",
+        "water": "High and continuous through the year."
+      },
+      "season": "Can be planted in most months where irrigation is available; a crop cycle takes roughly a year or more.",
+      "cautions": [
+        "High water and nutrient requirements throughout the crop cycle.",
+        "Strong winds can flatten plants; windbreaks or propping are often needed."
+      ],
+      "typical_ranges": {
+        "nitrogen": [80, 120], "phosphorus": [70, 95], "potassium": [45, 55],
+        "temperature": [25, 30], "humidity": [75, 85], "ph": [5.5, 6.5], "rainfall": [90, 120]
+      }
+    },
+    "mango": {
+      "name": "Mango",
+      "also_known_as": "Aam",
+      "scientific_name": "Mangifera indica",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A long-lived tropical fruit tree that prefers a dry spell before flowering.",
+      "description": "Mango is a long-lived tropical and subtropical fruit tree. Established trees are fairly drought-tolerant, and a dry period before flowering generally improves fruit set.",
+      "growing_conditions": {
+        "climate": "Tropical to subtropical. Grows best between about 24 and 35 °C.",
+        "soil": "Deep, well-drained loam. Slightly acidic to neutral soils are preferred.",
+        "water": "Moderate. Young trees need regular watering; mature trees tolerate dry spells."
+      },
+      "season": "Planted as an orchard; trees take several years to begin bearing.",
+      "cautions": [
+        "Rain or high humidity at flowering reduces fruit set and encourages disease.",
+        "Shallow or poorly drained soils restrict root growth."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [15, 40], "potassium": [25, 35],
+        "temperature": [27, 36], "humidity": [45, 55], "ph": [4.5, 7.0], "rainfall": [89, 101]
+      }
+    },
+    "grapes": {
+      "name": "Grapes",
+      "also_known_as": "Angoor",
+      "scientific_name": "Vitis vinifera",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A perennial vine that needs dry weather while the fruit ripens.",
+      "description": "Grapes are grown on trained vines that need regular pruning and a support structure. Dry weather during ripening is important for fruit quality.",
+      "growing_conditions": {
+        "climate": "Warm, with dry weather during ripening.",
+        "soil": "Well-drained sandy loam to loam.",
+        "water": "Moderate and carefully controlled, usually through drip irrigation."
+      },
+      "season": "A vineyard is a multi-year planting with seasonal pruning and harvest cycles.",
+      "cautions": [
+        "Establishment cost is high and the crop needs skilled pruning and training.",
+        "Rain during ripening causes berry cracking and disease."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [120, 145], "potassium": [195, 205],
+        "temperature": [9, 42], "humidity": [80, 84], "ph": [5.5, 6.5], "rainfall": [65, 75]
+      }
+    },
+    "watermelon": {
+      "name": "Watermelon",
+      "also_known_as": "Tarbooj",
+      "scientific_name": "Citrullus lanatus",
+      "category": "Fruit",
+      "perennial": false,
+      "summary": "A warm-season vine crop for light, well-drained soils.",
+      "description": "Watermelon is a warm-season vine crop that matures in about three months. It does best on light soils with plenty of sunshine.",
+      "growing_conditions": {
+        "climate": "Warm and sunny. Grows best between about 24 and 30 °C; damaged by frost.",
+        "soil": "Sandy loam with good drainage and near-neutral pH.",
+        "water": "Moderate. Reducing water as fruit ripens improves sweetness."
+      },
+      "season": "Summer crop in much of India, also grown on riverbeds.",
+      "cautions": [
+        "Waterlogging and prolonged humid weather encourage fungal disease.",
+        "Heavy clay soils are poorly suited."
+      ],
+      "typical_ranges": {
+        "nitrogen": [80, 120], "phosphorus": [5, 30], "potassium": [45, 55],
+        "temperature": [24, 27], "humidity": [80, 90], "ph": [6.0, 7.0], "rainfall": [40, 60]
+      }
+    },
+    "muskmelon": {
+      "name": "Muskmelon",
+      "also_known_as": "Kharbooja",
+      "scientific_name": "Cucumis melo",
+      "category": "Fruit",
+      "perennial": false,
+      "summary": "A warm-season melon that needs dry weather as the fruit ripens.",
+      "description": "Muskmelon is a warm-season vine crop valued for its sweet, aromatic fruit. Dry, sunny weather during ripening gives the best quality.",
+      "growing_conditions": {
+        "climate": "Hot and sunny. Grows best between about 27 and 32 °C.",
+        "soil": "Sandy loam with good drainage and near-neutral pH.",
+        "water": "Moderate early on, reduced as the fruit ripens."
+      },
+      "season": "Summer crop in India.",
+      "cautions": [
+        "Rain or humid weather near maturity lowers sweetness and keeping quality.",
+        "Poorly drained soils cause vine diseases."
+      ],
+      "typical_ranges": {
+        "nitrogen": [80, 120], "phosphorus": [5, 30], "potassium": [45, 55],
+        "temperature": [27, 30], "humidity": [90, 95], "ph": [6.0, 6.8], "rainfall": [20, 30]
+      }
+    },
+    "apple": {
+      "name": "Apple",
+      "also_known_as": "Seb",
+      "scientific_name": "Malus domestica",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A temperate fruit tree that needs cold winters to fruit properly.",
+      "description": "Apple is a temperate fruit tree. Most varieties need a long period of winter cold to flower and fruit properly, which is why apples are grown mainly in cool, high-elevation regions.",
+      "growing_conditions": {
+        "climate": "Temperate, with cold winters and mild summers.",
+        "soil": "Well-drained loam; slightly acidic soils are preferred.",
+        "water": "Moderate and evenly distributed through the growing season."
+      },
+      "season": "Planted as an orchard; trees take several years to begin bearing.",
+      "cautions": [
+        "The model has no input for winter chilling or altitude. Apple is generally unsuitable for warm lowland areas regardless of the soil readings entered.",
+        "Late spring frost during flowering can destroy the crop."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [120, 145], "potassium": [195, 205],
+        "temperature": [21, 24], "humidity": [90, 95], "ph": [5.5, 6.5], "rainfall": [100, 125]
+      }
+    },
+    "orange": {
+      "name": "Orange",
+      "also_known_as": "Santra",
+      "scientific_name": "Citrus spp.",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A subtropical citrus tree that needs good drainage.",
+      "description": "Oranges and mandarins are subtropical citrus trees grown for fresh fruit and juice. They need deep, well-drained soil and are sensitive to both frost and standing water.",
+      "growing_conditions": {
+        "climate": "Subtropical. Tolerates roughly 13 to 35 °C; sensitive to frost.",
+        "soil": "Deep, well-drained loam. Slightly acidic to neutral soils are preferred.",
+        "water": "Moderate and regular."
+      },
+      "season": "Planted as an orchard; trees take several years to begin bearing.",
+      "cautions": [
+        "Waterlogged soil leads to root rot and tree decline.",
+        "Frost damages fruit and young growth."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [5, 30], "potassium": [5, 15],
+        "temperature": [10, 35], "humidity": [90, 95], "ph": [6.0, 8.0], "rainfall": [100, 120]
+      }
+    },
+    "papaya": {
+      "name": "Papaya",
+      "also_known_as": "Papita",
+      "scientific_name": "Carica papaya",
+      "category": "Fruit",
+      "perennial": true,
+      "summary": "A fast-bearing tropical fruit that cannot stand waterlogging.",
+      "description": "Papaya is a fast-growing tropical fruit plant that can begin bearing within about a year of planting. It needs warmth and fertile soil and is extremely sensitive to standing water.",
+      "growing_conditions": {
+        "climate": "Tropical. Grows best between about 22 and 35 °C; damaged by frost.",
+        "soil": "Fertile, well-drained loam with near-neutral pH.",
+        "water": "Moderate and regular, with excellent drainage."
+      },
+      "season": "Can be planted in several seasons; plants remain productive for a few years.",
+      "cautions": [
+        "Even a day or two of waterlogging can kill plants.",
+        "Strong wind and viral diseases are common causes of loss."
+      ],
+      "typical_ranges": {
+        "nitrogen": [31, 70], "phosphorus": [46, 70], "potassium": [45, 55],
+        "temperature": [23, 44], "humidity": [90, 95], "ph": [6.5, 7.0], "rainfall": [40, 250]
+      }
+    },
+    "coconut": {
+      "name": "Coconut",
+      "also_known_as": "Nariyal",
+      "scientific_name": "Cocos nucifera",
+      "category": "Plantation",
+      "perennial": true,
+      "summary": "A long-lived palm of humid tropical regions.",
+      "description": "Coconut is a long-lived palm of humid tropical regions, especially coastal areas. It needs warmth, high humidity and well-distributed rainfall or irrigation all year.",
+      "growing_conditions": {
+        "climate": "Humid tropical. Grows best between about 25 and 30 °C with high humidity.",
+        "soil": "Well-drained sandy loam, laterite or alluvial soils.",
+        "water": "High and spread through the year."
+      },
+      "season": "Planted as a plantation; palms take several years to begin bearing and produce for decades.",
+      "cautions": [
+        "A decades-long investment: palms take years to bear.",
+        "Poorly suited to cold or dry inland conditions."
+      ],
+      "typical_ranges": {
+        "nitrogen": [0, 40], "phosphorus": [5, 30], "potassium": [25, 35],
+        "temperature": [25, 30], "humidity": [90, 100], "ph": [5.5, 6.5], "rainfall": [130, 225]
+      }
+    },
+    "cotton": {
+      "name": "Cotton",
+      "also_known_as": "Kapas",
+      "scientific_name": "Gossypium spp.",
+      "category": "Fibre",
+      "perennial": false,
+      "summary": "A warm-season fibre crop that needs a long frost-free season.",
+      "description": "Cotton is the world's main natural fibre crop. It needs a long, warm, frost-free season and dry weather when the bolls open.",
+      "growing_conditions": {
+        "climate": "Warm, with a long frost-free season and dry weather at boll opening.",
+        "soil": "Deep, well-drained soils; black cotton soils and alluvial soils are widely used.",
+        "water": "Moderate. Sensitive to waterlogging."
+      },
+      "season": "Kharif in India; the crop occupies the field for roughly five to six months.",
+      "cautions": [
+        "Insect pests are a major risk and need regular monitoring.",
+        "Rain when bolls are open damages the lint."
+      ],
+      "typical_ranges": {
+        "nitrogen": [100, 140], "phosphorus": [35, 60], "potassium": [15, 25],
+        "temperature": [22, 26], "humidity": [75, 85], "ph": [5.8, 8.0], "rainfall": [60, 100]
+      }
+    },
+    "jute": {
+      "name": "Jute",
+      "also_known_as": "Pat",
+      "scientific_name": "Corchorus spp.",
+      "category": "Fibre",
+      "perennial": false,
+      "summary": "A fibre crop of hot, humid, high-rainfall regions.",
+      "description": "Jute is a bast-fibre crop of hot, humid regions with heavy rainfall, grown mainly on fertile river-basin soils. After harvest the stems are soaked in water (retting) to release the fibre.",
+      "growing_conditions": {
+        "climate": "Hot and humid. Grows best between about 24 and 35 °C.",
+        "soil": "Fertile alluvial loam.",
+        "water": "High, and a supply of water is also needed for retting after harvest."
+      },
+      "season": "Sown before the monsoon and harvested about four to five months later in eastern India.",
+      "cautions": [
+        "A nearby source of clean, slow-moving water is needed for retting.",
+        "Harvesting and fibre extraction are labour-intensive."
+      ],
+      "typical_ranges": {
+        "nitrogen": [60, 100], "phosphorus": [35, 60], "potassium": [35, 45],
+        "temperature": [23, 27], "humidity": [70, 90], "ph": [6.0, 7.5], "rainfall": [150, 200]
+      }
+    },
+    "coffee": {
+      "name": "Coffee",
+      "also_known_as": "Kaapi",
+      "scientific_name": "Coffea spp.",
+      "category": "Plantation",
+      "perennial": true,
+      "summary": "A shade-loving plantation shrub of cool, humid hill regions.",
+      "description": "Coffee is a perennial shrub usually grown under shade trees in tropical hill regions. It needs well-distributed rainfall with a short dry spell that triggers flowering.",
+      "growing_conditions": {
+        "climate": "Mild tropical highland conditions, roughly 15 to 28 °C, with shade.",
+        "soil": "Deep, well-drained soil rich in organic matter; slightly acidic soils are preferred.",
+        "water": "Moderate to high, well distributed through the year."
+      },
+      "season": "Planted as a plantation; shrubs take a few years to begin bearing.",
+      "cautions": [
+        "The model has no input for altitude or shade. Coffee is normally grown in hilly regions under shade trees.",
+        "A multi-year investment that needs specialised processing after harvest."
+      ],
+      "typical_ranges": {
+        "nitrogen": [80, 120], "phosphorus": [15, 40], "potassium": [25, 35],
+        "temperature": [23, 28], "humidity": [50, 70], "ph": [6.0, 7.5], "rainfall": [115, 200]
+      }
+    }
+  }
+}

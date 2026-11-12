@@ -1,0 +1,26 @@
+{
+  "baseline_random_forest": {
+    "accuracy_by_input_noise": {
+      "0%": 0.9955,
+      "10%": 0.9655,
+      "20%": 0.8636,
+      "30%": 0.7391
+    },
+    "calibration_error_at_20pct_noise": 0.1744
+  },
+  "final_blend": {
+    "accuracy_by_input_noise": {
+      "0%": 0.9864,
+      "10%": 0.9795,
+      "20%": 0.9341,
+      "30%": 0.8536
+    },
+    "calibration_error_at_20pct_noise": 0.103
+  },
+  "unusual_input_detector": {
+    "neighbours": 5,
+    "threshold_percentile_of_training_data": 99.0,
+    "share_of_real_rows_flagged": 0.01,
+    "share_of_uniform_random_inputs_flagged": 0.991
+  }
+}

@@ -1,0 +1,20 @@
+# Local development database.
+#
+#   docker compose up -d        start MongoDB on 127.0.0.1:27017
+#   docker compose down         stop it (data is kept in the named volume)
+#   docker compose down -v      stop it and delete the data
+#
+# The port is published on the loopback interface only, so the database is not
+# reachable from other machines. This file is for development; a production
+# database needs authentication and TLS.
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - agricloud-mongo-data:/data/db
+
+volumes:
+  agricloud-mongo-data:

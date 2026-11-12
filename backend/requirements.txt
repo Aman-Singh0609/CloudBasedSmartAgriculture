@@ -1,0 +1,14 @@
+# Runtime dependencies for AgricultureCloud.
+# scikit-learn is pinned to the exact version the bundled model was trained
+# with; loading a pickled model under a different version is not supported.
+Flask>=3.1,<3.2
+Flask-WTF>=1.2,<2
+Flask-Limiter>=3.8,<5
+pymongo>=4.10,<5
+dnspython>=2.6,<3
+python-dotenv>=1.0,<2
+requests>=2.32,<3
+numpy>=2.0,<2.4
+scikit-learn==1.6.1
+joblib>=1.4,<2
+waitress>=3.0,<4

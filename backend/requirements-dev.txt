@@ -1,0 +1,5 @@
+# Development and test dependencies (installs the runtime set too).
+-r requirements.txt
+pytest>=8,<10
+pytest-cov>=5
+mongomock>=4.3,<5
