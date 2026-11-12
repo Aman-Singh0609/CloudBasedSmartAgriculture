@@ -1,4 +1,0 @@
-Flask
-numpy
-joblib
-mysql-connector-python
